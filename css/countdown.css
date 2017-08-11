@@ -9,12 +9,30 @@ body {
   height: 540.55px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+.sei-la {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.countdown-logo {
+  width: 40%;
 }
 .countdown-time {
-  color: rgb(242, 90, 112);
+  color: rgba(242, 90, 112, .9);
+
   text-align: center;
   display: table-cell;
   vertical-align: middle;
-  font-size: 120px;
+  font-size: 340px;
+  font-weight: 100;
+}
+.countdown-time strong {
+  color: rgb(242, 90, 112);
+  font-weight: 700;
+}
+.countdown-time span {
+  font-weight: 400;
 }
