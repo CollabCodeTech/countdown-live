@@ -36,3 +36,16 @@ body {
 .countdown-time span {
   font-weight: 400;
 }
+
+.wrap-countdown-line {
+  background-color: rgba(195, 197, 198, 0.21);
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.countdown-line {
+  background-color: #C3C5C6; 
+  height: 10px;
+  display: block;
+  transition: .3s;
+}
