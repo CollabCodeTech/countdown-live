@@ -1,0 +1,7 @@
+node_modules
+.DS_Store
+mongodb
+package-lock.json
+npm-debug.log
+
+.idea/
