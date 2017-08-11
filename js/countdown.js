@@ -6,7 +6,9 @@ let countdownText = formatCountdownTimer(countdownCounter)
 
 function formatCountdownTimer(countdown){
   let seilah = moment(moment.duration(countdown)._data).format("mm:ss")
-  return `${seilah}`
+  let coisa = seilah.split(':')
+
+  return `<strong>${coisa[0]}</strong><span>:</span>${coisa[1]}`
 }
 
 setTimeout(function countdownFn(){
@@ -18,7 +20,7 @@ setTimeout(function countdownFn(){
 }, 1000)
 
 requestAnimationFrame(function raf(){
-  $countdown.textContent = countdownText
+  $countdown.innerHTML = countdownText
   if(countdownCounter > 0){
     requestAnimationFrame(raf)
   }
