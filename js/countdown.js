@@ -1,5 +1,5 @@
 const $countdownTime = document.querySelector(".countdown-time")
-const $countdownLine = document.querySelector('.countdown-line')
+const $countdownLine = document.querySelector('.line')
 const COUNTDOWN_TIME = 1000 * 60 * 3
 
 let currentLineSize = 1;
@@ -7,10 +7,10 @@ let countdownCounter = COUNTDOWN_TIME
 let countdownText = formatCountdownTimer(countdownCounter)
 
 function formatCountdownTimer(countdown){
-  let seilah = moment(moment.duration(countdown)._data).format("mm:ss")
-  let coisa = seilah.split(':')
+  const timer = moment(moment.duration(countdown)._data).format("mm:ss")
+  const separatorMinuteAndSecond = timer.split(':')
 
-  return `<strong>${coisa[0]}</strong><span>:</span>${coisa[1]}`
+  return `<strong class="countdown-time-minute">${separatorMinuteAndSecond[0]}</strong><span class="countdown-time-separator">:</span>${separatorMinuteAndSecond[1]}`
 }
 
 setTimeout(function countdownFn(){

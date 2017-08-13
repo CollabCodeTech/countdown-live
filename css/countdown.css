@@ -1,10 +1,10 @@
-body {
+.pageCountdown {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.countdown {
+.wrap-countdown {
   width: 960px;
   height: 540.55px;
   display: flex;
@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.sei-la {
+.countdown {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,23 +29,10 @@ body {
   font-size: 340px;
   font-weight: 100;
 }
-.countdown-time strong {
+.countdown-time-second {
   color: rgb(242, 90, 112);
   font-weight: 700;
 }
-.countdown-time span {
+.countdown-time-separator {
   font-weight: 400;
-}
-
-.wrap-countdown-line {
-  background-color: rgba(195, 197, 198, 0.21);
-  width: 100%;
-  overflow: hidden;
-  border-radius: 5px;
-}
-.countdown-line {
-  background-color: #C3C5C6; 
-  height: 10px;
-  display: block;
-  transition: .3s;
 }
