@@ -8,22 +8,41 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/menu.css">
   <link rel="stylesheet" href="./css/countdown.css">
   <link rel="stylesheet" href="./css/line.css">
 </head>
 <body class="pageCountdown">
-  <article class="wrap-countdown">
-    <div class="countdown">
-      <img src="./img/logo.svg" alt="Logo do CollabCode" class="countdown-logo">
-      <h1 class="countdown-time"></h1>
-    </div>
+  <nav class="menu">
+    <a href="#menu" class="menu-icon">
+      <img class="menu-icon-settings" src="./img/settings.svg" alt="Abrir configurações">
+      <img class="menu-icon-close" src="./img/close.svg" alt="Fechar configurações">
+    </a>
 
-    <div class="wrap-line">
-      <span class="line"></span>
-    </div>
-  </article>
+    <form id="menu">
+      <label for="" class="menu-info">
+        Tempo:
+      </label>
+      <input class="menu-value" type="text" placeholder="Segundos">
+    </form>
+  </nav>
+
+  <div class="container">
+    <article class="wrap-countdown">
+      <div class="countdown">
+        <img src="./img/logo.svg" alt="Logo do CollabCode" class="countdown-logo">
+        <h1 class="countdown-time"></h1>
+      </div>
+
+      <div class="wrap-line">
+        <span class="line"></span>
+      </div>
+    </article>
+  </div>
 
   <script src="./js/moment.min.js"></script>
+  <script src="./js/menu.js"></script>
   <script src="./js/countdown.js"></script>
 </body>
 </html>

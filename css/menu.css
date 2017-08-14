@@ -1,0 +1,65 @@
+.menu {
+  box-sizing: border-box;
+  padding-top: 60px;
+  background-color: rgba(255, 255, 255, .7);
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  border-right: 2px solid rgba(58, 64, 66, .1);
+  z-index: 2;
+  transform: translateX(-100%);
+
+  transition: transform 300ms linear;
+}
+
+.menu_isActive {
+  transform: translateX(0);
+}
+.menu_isActive .menu-icon {
+  transform: translateX(0);
+}
+
+.menu-icon {
+  display: block;
+  width: 50px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transform: translateX(62px);
+
+  transition: transform 300ms linear;
+}
+.menu-icon img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity 300ms linear;
+}
+.menu-icon-close {
+  opacity: 0;
+}
+.menu_isActive .menu-icon-settings {
+  opacity: 0;
+}
+.menu_isActive .menu-icon-close {
+  opacity: .7;
+}
+
+#menu {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.menu-info {
+  display: block;
+  margin-bottom: 2px;
+}
+.menu-value {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  line-height: 40px;
+  font-size: 20px;
+  border: 1px solid rgba(58, 64, 66, .4);
+}

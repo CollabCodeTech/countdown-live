@@ -1,9 +1,3 @@
-.pageCountdown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .wrap-countdown {
   width: 960px;
   height: 540.55px;
