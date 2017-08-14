@@ -1,7 +1,7 @@
 const $countdownTime = document.querySelector(".countdown-time")
 const $countdownLine = document.querySelector('.line')
-const COUNTDOWN_TIME = 1000 * 60 * 3
 
+let COUNTDOWN_TIME = 1000 * 180
 let currentLineSize = 1;
 let countdownCounter = COUNTDOWN_TIME
 let countdownText = formatCountdownTimer(countdownCounter)
