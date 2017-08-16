@@ -12,6 +12,8 @@ $formMenu.addEventListener('submit', function(event) {
   const $second = this.querySelector('#second')
   const $background = this.querySelector('#background')
   const $time = this.querySelector('#time')
+  const $process = this.querySelector('#process')
+  const $backgroundProcess = this.querySelector('#backgroundProcess')
 
   if($second.value) {
     COUNTDOWN_TIME = 1000 * parseInt($second.value)
@@ -24,6 +26,14 @@ $formMenu.addEventListener('submit', function(event) {
 
   if($time.value) {
     document.querySelector('.countdown-time').style.color = $time.value
+  }
+
+  if($process.value) {
+    document.querySelector('.process').style.backgroundColor = $process.value
+  }
+
+  if($backgroundProcess.value) {
+    document.querySelector('.wrap-process').style.backgroundColor = $backgroundProcess.value
   }
 
   $menu.classList.toggle('menu_isActive')
