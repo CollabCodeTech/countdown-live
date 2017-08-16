@@ -1,10 +1,10 @@
-.wrap-line {
+.wrap-process {
   background-color: rgba(195, 197, 198, 0.21);
   width: 100%;
   overflow: hidden;
   border-radius: 5px;
 }
-.line {
+.process {
   background-color: #C3C5C6;
   height: 10px;
   display: block;
