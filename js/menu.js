@@ -26,7 +26,6 @@ $formMenu.addEventListener('submit', function(event) {
     document.querySelector('.countdown-time').style.color = $time.value
   }
 
-
   $menu.classList.toggle('menu_isActive')
   event.preventDefault()
 })
