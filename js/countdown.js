@@ -1,8 +1,8 @@
 const $countdownTime = document.querySelector(".countdown-time")
-const $countdownLine = document.querySelector('.line')
+const $countdownProcess = document.querySelector('.process')
 
 let COUNTDOWN_TIME = 1000 * 180
-let currentLineSize = 1;
+let currentProcessSize = 1;
 let countdownCounter = COUNTDOWN_TIME
 let countdownText = formatCountdownTimer(countdownCounter)
 
@@ -17,7 +17,7 @@ setTimeout(function countdownFn(){
   countdownCounter -= 1000
   countdownText = formatCountdownTimer(countdownCounter)
 
-  currentLineSize = (countdownCounter / COUNTDOWN_TIME)
+  currentProcessSize = (countdownCounter / COUNTDOWN_TIME)
 
   if(countdownCounter > 0){
     setTimeout(countdownFn, 1000)
@@ -26,7 +26,7 @@ setTimeout(function countdownFn(){
 
 requestAnimationFrame(function raf(){
   $countdownTime.innerHTML = countdownText
-  $countdownLine.style.transform = `scaleX(${currentLineSize})`
+  $countdownProcess.style.transform = `scaleX(${currentProcessSize})`
 
   if(countdownCounter > 0){
     requestAnimationFrame(raf)

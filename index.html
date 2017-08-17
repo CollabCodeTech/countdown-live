@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/menu.css">
   <link rel="stylesheet" href="./css/countdown.css">
-  <link rel="stylesheet" href="./css/line.css">
+  <link rel="stylesheet" href="./css/process.css">
   <link rel="stylesheet" href="./css/btn.css">
 </head>
 <body class="pageCountdown">
@@ -35,7 +35,17 @@
       <label for="time" class="menu-info">
         Tempo:
       </label>
-      <input id="time" class="menu-value" type="color" value="#FFFFFF">
+      <input id="time" class="menu-value" type="color" value="#F25A70">
+
+      <label for="process" class="menu-info">
+        Barra de progresso:
+      </label>
+      <input id="process" class="menu-value" type="color" value="#C3C5C6">
+
+      <label for="backgroundProcess" class="menu-info">
+        Fundo da barra de progresso:
+      </label>
+      <input id="backgroundProcess" class="menu-value" type="color" value="#F2F3F3">
 
       <input class="btn" type="submit" value="Atualizar">
     </form>
@@ -48,8 +58,8 @@
         <h1 class="countdown-time"></h1>
       </div>
 
-      <div class="wrap-line">
-        <span class="line"></span>
+      <div class="wrap-process">
+        <span class="process"></span>
       </div>
     </article>
   </div>
