@@ -16,8 +16,7 @@ $formMenu.addEventListener('submit', function(event) {
   const $backgroundProcess = this.querySelector('#backgroundProcess')
 
   if($second.value) {
-    COUNTDOWN_TIME = 1000 * parseInt($second.value)
-    countdownCounter = COUNTDOWN_TIME
+    resetCountdown(parseInt($second.value))
   }
 
   if($background.value) {
