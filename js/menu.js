@@ -10,6 +10,7 @@ $menuIcon.addEventListener('click', (event) => {
 
 $formMenu.addEventListener('submit', function(event) {
   const $second = this.querySelector('#second')
+  const $logo = this.querySelector('#logo')
   const $background = this.querySelector('#background')
   const $time = this.querySelector('#time')
   const $process = this.querySelector('#process')
@@ -17,6 +18,10 @@ $formMenu.addEventListener('submit', function(event) {
 
   if($second.value) {
     resetCountdown(parseInt($second.value))
+  }
+
+  if($logo.value) {
+    document.querySelector('.countdown-logo').src = $logo.value
   }
 
   if($background.value) {
