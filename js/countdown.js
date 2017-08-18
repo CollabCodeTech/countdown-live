@@ -22,6 +22,11 @@
       return `<strong class="countdown-time-minute">${separatorMinuteAndSecond[0]}</strong><span class="countdown-time-separator">:</span>${separatorMinuteAndSecond[1]}`
     }
 
+    function countdownEnd() {
+      endAudio = new Audio('https://www.myinstants.com/media/sounds/buzina-trem-araponga-que-porrada-na-orelha.mp3')
+      endAudio.play()
+    }
+
     currentTimeout = setTimeout(function countdownFn(){
       countdownCounter -= 1000
       countdownText = formatCountdownTimer(countdownCounter)
@@ -30,6 +35,8 @@
 
       if(countdownCounter > 0){
         currentTimeout = setTimeout(countdownFn, 1000)
+      } else {
+        countdownEnd()
       }
     }, 1000)
 
