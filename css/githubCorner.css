@@ -1,0 +1,14 @@
+.githubCorner {
+    opacity: .3;
+    fill:#151513;
+    color:#fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transition: opacity 200ms linear;
+}
+
+.githubCorner:hover {
+    opacity: 1;
+}
