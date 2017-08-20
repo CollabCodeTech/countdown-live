@@ -17,10 +17,11 @@
     let countdownText = formatCountdownTimer(countdownCounter)
 
     function formatCountdownTimer(countdown){
-      const timer = moment(moment.duration(countdown)._data).format("mm:ss")
-      const separatorMinuteAndSecond = timer.split(':')
+      const timer = moment.duration(countdown)
+      const outMinute = moment(timer._data).format('mm')
+      const outSecond = moment(timer._data).format('ss')
 
-      return `<strong class="countdown-time-minute">${separatorMinuteAndSecond[0]}</strong><span class="countdown-time-separator">:</span>${separatorMinuteAndSecond[1]}`
+      return `<strong class="countdown-time-minute">${outMinute}</strong><span class="countdown-time-separator">:</span>${outSecond}`
     }
 
     function countdownEnd() {
