@@ -6,11 +6,12 @@
 
   let currentTimeout
 
-  const resetCountdown = (seconds = 180) => {
+  const resetCountdown = (minutes = 0, seconds = 180) => {
     if(currentAnimationFrame) cancelAnimationFrame(currentAnimationFrame)
     if(currentTimeout) clearTimeout(currentTimeout)
 
-    let COUNTDOWN_TIME = 1000 * seconds
+    const time = seconds + (minutes * 60)
+    let COUNTDOWN_TIME = 1000 * time
     let currentProcessSize = 1;
     let countdownCounter = COUNTDOWN_TIME
     let countdownText = formatCountdownTimer(countdownCounter)
