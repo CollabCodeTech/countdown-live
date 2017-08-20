@@ -12,7 +12,8 @@
   align-items: center;
 }
 .countdown-logo {
-  width: 40%;
+  max-height: 100px;
+  max-width: 40%;
 }
 .countdown-time {
   color: rgba(242, 90, 112, .9);
