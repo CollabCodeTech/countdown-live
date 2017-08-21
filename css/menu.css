@@ -70,3 +70,8 @@
 .menu .btn {
   margin-bottom: 30px;
 }
+
+.menu .btn_second {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}

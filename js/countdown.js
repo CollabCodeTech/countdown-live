@@ -7,6 +7,11 @@ const countdown = (() => {
 
   let currentTimeout
 
+  function endSound() {
+    endAudio = new Audio(countdown.INITIAL_END_SONG)
+    endAudio.play()
+  }
+
   const resetCountdown = (minutes = 0, seconds = 180) => {
     if(currentAnimationFrame) cancelAnimationFrame(currentAnimationFrame)
     if(currentTimeout) clearTimeout(currentTimeout)
@@ -21,18 +26,12 @@ const countdown = (() => {
       const timer = moment.duration(countdown)
       let outMinute = parseInt(timer.asMinutes())
       const outSecond = moment(timer._data).format('ss')
-
         
       if(outMinute.toString().length == 1) {
         outMinute = '0' + outMinute
       }
 
       return `<strong class="countdown-time-minute">${outMinute}</strong><span class="countdown-time-separator">:</span>${outSecond}`
-    }
-
-    function countdownEnd() {
-      endAudio = new Audio(countdown.INITIAL_END_SONG)
-      endAudio.play()
     }
 
     currentTimeout = setTimeout(function countdownFn(){
@@ -44,7 +43,7 @@ const countdown = (() => {
       if(countdownCounter > 0){
         currentTimeout = setTimeout(countdownFn, 1000)
       } else {
-        countdownEnd()
+        endSound()
       }
     }, 1000)
 
@@ -63,6 +62,7 @@ const countdown = (() => {
   window.resetCountdown = resetCountdown
   return {
     INITIAL_END_SONG,
-    resetCountdown
+    resetCountdown,
+    endSound
   }
 })()

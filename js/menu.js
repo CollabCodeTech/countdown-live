@@ -1,6 +1,19 @@
-const $formMenu = document.querySelector('#menu')
 const $menu = document.querySelector('.menu')
-const $menuIcon = document.querySelector('.menu-icon')
+const $btnDefault = $menu.querySelector('.btn_second')
+const menu = new Menu($menu)
+menu.default();
+
+const $formMenu = $menu.querySelector('#menu')
+const $menuIcon = $menu.querySelector('.menu-icon')
+
+const $minute = $menu.querySelector('#minute')
+const $second = $menu.querySelector('#second')
+const $logo = $menu.querySelector('#logo')
+const $endSong = $menu.querySelector('#endSong')
+const $background = $menu.querySelector('#background')
+const $time = $menu.querySelector('#time')
+const $process = $menu.querySelector('#process')
+const $processBackground = $menu.querySelector('#processBackground')
 
 document.querySelector('.container').addEventListener('click', function(event) {
   event.preventDefault()
@@ -13,46 +26,87 @@ $menuIcon.addEventListener('click', (event) => {
   event.preventDefault()
 })
 
+$minute.addEventListener('blur', (event) => {
+  const minute = $minute.value 
+  const second = $second.value
+
+  menu.changeTime(minute, second)
+})
+
+$second.addEventListener('blur', () => {
+  const minute = $minute.value
+  const second = $second.value
+
+  menu.changeTime(minute, second)
+})
+
+$logo.addEventListener('blur', () => {
+  const src = $logo.value
+
+  menu.changeLogo(src)
+})
+
+$endSong.addEventListener('blur', () => {
+  const url = $endSong.value
+  const start = true
+
+  menu.changeSong(url, start)
+})
+
+
+$background.addEventListener('change', () => {
+  const color = $background.value
+
+  menu.changeBackground(color)
+})
+
+$time.addEventListener('change', () => {
+  const color = $time.value
+
+  menu.changeTimeColor(color)
+})
+
+$process.addEventListener('change', () => {
+  const color = $process.value
+
+  menu.changeProcessColor(color)
+})
+
+$processBackground.addEventListener('change', () => {
+  const color = $processBackground.value
+
+  menu.changeProcessBackground(color)
+})
+
+$btnDefault.addEventListener('click', (event) => {
+  menu.default()
+
+  $menu.classList.toggle('menu_isActive')
+  event.preventDefault()
+})
+
 $formMenu.addEventListener('submit', function(event) {
-  const $minute = this.querySelector('#minute')
-  const $second = this.querySelector('#second')
-  const $logo = this.querySelector('#logo')
-  const $endsongUrl = this.querySelector('#endsongUrl')
-  const $background = this.querySelector('#background')
-  const $time = this.querySelector('#time')
-  const $process = this.querySelector('#process')
-  const $backgroundProcess = this.querySelector('#backgroundProcess')
+  const minute = $minute.value 
+  const second = $second.value
+  const srcLogo = $logo.value
+  const urlSong = $endSong.value
+  const backgroundColor = $background.value
+  const timeColor = $time.value
+  const processColor = $process.value
+  const processBackgroundColor = $processBackground.value
 
-  if($minute.value || $second.value) {
-    const minute = $minute.value || 0
-    const second = $second.value || 0
-
-    resetCountdown(parseInt(minute), parseInt(second))
+  const settings = {
+    minute, 
+    second, 
+    srcLogo, 
+    urlSong, 
+    backgroundColor, 
+    timeColor, 
+    processColor, 
+    processBackgroundColor
   }
 
-  if($logo.value) {
-    document.querySelector('.countdown-logo').src = $logo.value
-  }
-
-  if($background.value) {
-    document.body.style.backgroundColor = $background.value
-  }
-
-  if($time.value) {
-    document.querySelector('.countdown-time').style.color = $time.value
-  }
-
-  if($process.value) {
-    document.querySelector('.process').style.backgroundColor = $process.value
-  }
-
-  if($backgroundProcess.value) {
-    document.querySelector('.wrap-process').style.backgroundColor = $backgroundProcess.value
-  }
-
-  if($endsongUrl.value) {
-    countdown.INITIAL_END_SONG = $endsongUrl.value
-  }
+  menu.salvar(settings)
 
   $menu.classList.toggle('menu_isActive')
   event.preventDefault()

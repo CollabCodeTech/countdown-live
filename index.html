@@ -44,7 +44,7 @@
       <label for="logo" class="menu-info">
         Alerta de tempo esgotado:
       </label>
-      <input id="endsongUrl" class="menu-value" type="text" placeholder="https://site.com.br/som.mp3">
+      <input id="endSong" class="menu-value" type="text" placeholder="https://site.com.br/som.mp3">
 
       <label for="background" class="menu-info">
         Fundo:
@@ -61,12 +61,13 @@
       </label>
       <input id="process" class="menu-value" type="color" value="#C3C5C6">
 
-      <label for="backgroundProcess" class="menu-info">
+      <label for="processBackground" class="menu-info">
         Fundo da barra de progresso:
       </label>
-      <input id="backgroundProcess" class="menu-value" type="color" value="#F2F3F3">
+      <input id="processBackground" class="menu-value" type="color" value="#F2F3F3">
 
-      <input class="btn" type="submit" value="Atualizar">
+      <button class="btn btn_second">Padrão</button>
+      <input class="btn" type="submit" value="Salvar">
     </form>
   </nav>
 
@@ -84,7 +85,9 @@
   </div>
 
   <script src="./js/moment.min.js"></script>
-  <script src="./js/menu.js"></script>
   <script src="./js/countdown.js"></script>
+  <script src="./js/component/settingsMenuDefault.js"></script>
+  <script src="./js/component/Menu.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 </html>

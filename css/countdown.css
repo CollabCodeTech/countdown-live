@@ -16,7 +16,7 @@
   max-width: 40%;
 }
 .countdown-time {
-  color: rgba(242, 90, 112, .9);
+  color: #F36A7E;
 
   text-align: center;
   display: table-cell;
@@ -25,7 +25,7 @@
   font-weight: 100;
 }
 .countdown-time-second {
-  color: rgb(242, 90, 112);
+  color: #F36A7E;
   font-weight: 700;
 }
 .countdown-time-separator {
