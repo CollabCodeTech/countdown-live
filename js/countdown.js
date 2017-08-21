@@ -22,8 +22,9 @@ const countdown = (() => {
       let outMinute = parseInt(timer.asMinutes())
       const outSecond = moment(timer._data).format('ss')
 
-      if(outMinute.length == 1) {
-        outMinute = '0' + onMinute
+        
+      if(outMinute.toString().length == 1) {
+        outMinute = '0' + outMinute
       }
 
       return `<strong class="countdown-time-minute">${outMinute}</strong><span class="countdown-time-separator">:</span>${outSecond}`
