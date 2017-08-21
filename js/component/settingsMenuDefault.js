@@ -1,7 +1,7 @@
 const settingsMenuDefault = {
   minute: 3, 
   second: 0, 
-  srcLogo: './img/logo.svg',
+  srcLogo: 'https://imgur.com/download/kjWzqUd',
   altLog: 'Logo do CollabCode',
   urlSong: 'https://www.myinstants.com/media/sounds/buzina-trem-araponga-que-porrada-na-orelha.mp3',
   startSong: false,
