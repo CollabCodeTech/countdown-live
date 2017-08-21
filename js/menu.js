@@ -6,6 +6,7 @@ menu.default();
 const $formMenu = $menu.querySelector('#menu')
 const $menuIcon = $menu.querySelector('.menu-icon')
 
+const $menuValues = $menu.querySelectorAll('.menu-value')
 const $minute = $menu.querySelector('#minute')
 const $second = $menu.querySelector('#second')
 const $logo = $menu.querySelector('#logo')
@@ -25,6 +26,19 @@ $menuIcon.addEventListener('click', (event) => {
 
   event.preventDefault()
 })
+
+let max = $menuValues.length
+while(max--) {
+  console.log(max)
+  $menuValues[max].addEventListener('focus', function(event) {
+    document.querySelector(`[for="${this.id}"]`).classList.add('menu-info_focus')
+  })
+
+  $menuValues[max].addEventListener('blur', function(event) {
+    document.querySelector(`[for="${this.id}"]`).classList.remove('menu-info_focus')
+  })
+}
+
 
 $minute.addEventListener('blur', (event) => {
   const minute = $minute.value 
@@ -79,10 +93,10 @@ $processBackground.addEventListener('change', () => {
 })
 
 $btnDefault.addEventListener('click', (event) => {
+  event.preventDefault()
   menu.default()
 
   $menu.classList.toggle('menu_isActive')
-  event.preventDefault()
 })
 
 $formMenu.addEventListener('submit', function(event) {

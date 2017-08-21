@@ -1,4 +1,5 @@
 .btn {
+  opacity: .8;
   width: 100%;
   height: 40px;
   line-height: 40px;
@@ -7,6 +8,18 @@
   text-transform: uppercase;
   font-size: 15px;
   cursor: pointer;
+  transform-origin: center center;
+
+  transition: all 200ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 1;
+}
+
+.btn:active {
+  transform: scale(.9)
 }
 
 .btn_second {
