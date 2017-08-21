@@ -94,6 +94,16 @@ $processBackground.addEventListener('change', () => {
 
 $btnDefault.addEventListener('click', (event) => {
   event.preventDefault()
+
+  $minute.value = settingsMenuDefault.minute
+  $second.value = settingsMenuDefault.second
+  $logo.value = settingsMenuDefault.srcLogo
+  $endSong.value = settingsMenuDefault.urlSong
+  $background.value = settingsMenuDefault.backgroundColor
+  $time.value = settingsMenuDefault.timeColor
+  $process.value = settingsMenuDefault.processColor
+  $processBackground.value = settingsMenuDefault.processBackgroundColor
+
   menu.default()
 
   $menu.classList.toggle('menu_isActive')
