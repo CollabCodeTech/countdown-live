@@ -1,6 +1,7 @@
-(() => {
+const countdown = (() => {
   const $countdownTime = document.querySelector(".countdown-time")
   const $countdownProcess = document.querySelector('.process')
+  let INITIAL_END_SONG = 'https://www.myinstants.com/media/sounds/buzina-trem-araponga-que-porrada-na-orelha.mp3'
 
   let currentAnimationFrame
 
@@ -25,7 +26,7 @@
     }
 
     function countdownEnd() {
-      endAudio = new Audio('https://www.myinstants.com/media/sounds/buzina-trem-araponga-que-porrada-na-orelha.mp3')
+      endAudio = new Audio(countdown.INITIAL_END_SONG)
       endAudio.play()
     }
 
@@ -55,5 +56,8 @@
   resetCountdown()
 
   window.resetCountdown = resetCountdown
-
+  return {
+    INITIAL_END_SONG,
+    resetCountdown
+  }
 })()

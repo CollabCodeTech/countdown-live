@@ -12,6 +12,7 @@ $formMenu.addEventListener('submit', function(event) {
   const $minute = this.querySelector('#minute')
   const $second = this.querySelector('#second')
   const $logo = this.querySelector('#logo')
+  const $endsongUrl = this.querySelector('#endsongUrl')
   const $background = this.querySelector('#background')
   const $time = this.querySelector('#time')
   const $process = this.querySelector('#process')
@@ -42,6 +43,10 @@ $formMenu.addEventListener('submit', function(event) {
 
   if($backgroundProcess.value) {
     document.querySelector('.wrap-process').style.backgroundColor = $backgroundProcess.value
+  }
+
+  if($endsongUrl.value) {
+    countdown.INITIAL_END_SONG = $endsongUrl.value
   }
 
   $menu.classList.toggle('menu_isActive')
