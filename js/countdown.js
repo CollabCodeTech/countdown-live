@@ -18,7 +18,7 @@
 
     function formatCountdownTimer(countdown){
       const timer = moment.duration(countdown)
-      const outMinute = moment(timer._data).format('mm')
+      const outMinute = parseInt(timer.asMinutes())
       const outSecond = moment(timer._data).format('ss')
 
       return `<strong class="countdown-time-minute">${outMinute}</strong><span class="countdown-time-separator">:</span>${outSecond}`

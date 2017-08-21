@@ -2,6 +2,11 @@ const $formMenu = document.querySelector('#menu')
 const $menu = document.querySelector('.menu')
 const $menuIcon = document.querySelector('.menu-icon')
 
+document.querySelector('.container').addEventListener('click', function(event) {
+  event.preventDefault()
+  $menu.classList.remove('menu_isActive')
+})
+
 $menuIcon.addEventListener('click', (event) => {
   $menu.classList.toggle('menu_isActive')
 
@@ -20,7 +25,7 @@ $formMenu.addEventListener('submit', function(event) {
   if($minute.value || $second.value) {
     const minute = $minute.value || 0
     const second = $second.value || 0
-    
+
     resetCountdown(parseInt(minute), parseInt(second))
   }
 
