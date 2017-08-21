@@ -78,7 +78,8 @@
 
   transition: border 200ms linear;
 }
-.menu-value:focus {
+.menu-value:focus,
+.menu-value:hover {
   border: 2px solid rgba(58,64, 66, 1);
 }
 

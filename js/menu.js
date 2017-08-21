@@ -37,6 +37,10 @@ while(max--) {
   $menuValues[max].addEventListener('blur', function(event) {
     document.querySelector(`[for="${this.id}"]`).classList.remove('menu-info_focus')
   })
+
+  $menuValues[max].addEventListener('click', function(event) {
+    this.focus()
+  })
 }
 
 
