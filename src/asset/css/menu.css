@@ -53,35 +53,6 @@
   height: 100%;
   overflow-y: scroll;
 }
-.menu-info {
-  opacity: .7;
-  display: block;
-  margin-bottom: 2px;
-  transform: scale(.9);
-  transform-origin: left center;
-
-  transition: all 200ms linear;
-}
-.menu-info_focus {
-  opacity: 1;
-  transform: scale(1);
-}
-.menu-value {
-  box-sizing: border-box;
-  width: 100%;
-  height: 40px;
-  padding: 5px;
-  line-height: 40px;
-  font-size: 20px;
-  margin-bottom: 15px;
-  border: 1px solid rgba(58, 64, 66, .4);
-
-  transition: border 200ms linear;
-}
-.menu-value:focus,
-.menu-value:hover {
-  border: 2px solid rgba(58,64, 66, 1);
-}
 
 .menu .btn {
   margin-bottom: 30px;

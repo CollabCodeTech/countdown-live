@@ -10,10 +10,13 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/githubCorner.css">
+  <link rel="stylesheet" href="./css/btn.css">
+  <link rel="stylesheet" href="./css/form.css">
   <link rel="stylesheet" href="./css/menu.css">
   <link rel="stylesheet" href="./css/countdown.css">
   <link rel="stylesheet" href="./css/process.css">
-  <link rel="stylesheet" href="./css/btn.css">
+  <link rel="stylesheet" href="./css/modal.css">
+  
 </head>
 <body class="pageCountdown">
   
@@ -26,45 +29,45 @@
     </a>
 
     <form id="menu">
-      <label for="minute" class="menu-info">
+      <label for="minute" class="menu-info form-info">
         Minutos:
       </label>
-      <input id="minute" class="menu-value" type="text" placeholder="Minutos" value="3">
+      <input id="minute" class="menu-value form-value" type="text" placeholder="Minutos" value="3">
       
-      <label for="second" class="menu-info">
+      <label for="second" class="menu-info form-info">
         Segundos:
       </label>
-      <input id="second" class="menu-value" type="text" placeholder="Segundos" value="0">
+      <input id="second" class="menu-value form-value" type="text" placeholder="Segundos" value="0">
 
-      <label for="logo" class="menu-info">
+      <label for="logo" class="menu-info form-info">
         Link pro logo:
       </label>
-      <input id="logo" class="menu-value" type="text" placeholder="http://caelum.com.br/logo.png" value="https://imgur.com/download/kjWzqUd">
+      <input id="logo" class="menu-value form-value" type="text" placeholder="http://caelum.com.br/logo.png" value="https://imgur.com/download/kjWzqUd">
 
-      <label for="endSong" class="menu-info">
+      <label for="endSong" class="menu-info form-info">
         Alerta de tempo esgotado:
       </label>
-      <input id="endSong" class="menu-value" type="text" placeholder="https://site.com.br/som.mp3" value="https://www.myinstants.com/media/sounds/buzina-trem-araponga-que-porrada-na-orelha.mp3">
+      <input id="endSong" class="menu-value form-value" type="text" placeholder="https://site.com.br/som.mp3" value="https://www.myinstants.com/media/sounds/buzina-trem-araponga-que-porrada-na-orelha.mp3">
 
-      <label for="background" class="menu-info">
+      <label for="background" class="menu-info form-info">
         Fundo:
       </label>
-      <input id="background" class="menu-value" type="color" value="#FFFFFF">
+      <input id="background" class="menu-value form-value" type="color" value="#FFFFFF">
 
-      <label for="time" class="menu-info">
+      <label for="time" class="menu-info form-info">
         Tempo:
       </label>
-      <input id="time" class="menu-value" type="color" value="#F25A70">
+      <input id="time" class="menu-value form-value" type="color" value="#F25A70">
 
-      <label for="process" class="menu-info">
+      <label for="process" class="menu-info form-info">
         Barra de progresso:
       </label>
-      <input id="process" class="menu-value" type="color" value="#C3C5C6">
+      <input id="process" class="menu-value form-value" type="color" value="#C3C5C6">
 
-      <label for="processBackground" class="menu-info">
+      <label for="processBackground" class="menu-info form-info">
         Fundo da barra de progresso:
       </label>
-      <input id="processBackground" class="menu-value" type="color" value="#F2F3F3">
+      <input id="processBackground" class="menu-value form-value" type="color" value="#F2F3F3">
 
       <button class="btn btn_second">Padrão</button>
       <input class="btn" type="submit" value="Salvar">
@@ -84,10 +87,24 @@
     </article>
   </div>
 
+  <section class="modal">
+    <form class="modal-action" action="">
+      <label class="form-info" for="">Personalize sua URL</label>
+      <input class="modal-action-value form-value" type="text" placeholder="Máximo de 15 caracteres">
+      <span class="modal-action-warm form-warm">15</span>
+
+      <output class="modal-action-output">timer.collabcode.tech/</output>
+
+      <button class="btn">Gerar URL</button>
+    </form>
+  </section>
+
   <script src="./js/moment.min.js"></script>
   <script src="./js/countdown.js"></script>
   <script src="./js/component/settingsMenuDefault.js"></script>
+  <script src="./js/form.js"></script>
   <script src="./js/component/Menu.js"></script>
   <script src="./js/menu.js"></script>
+  <script src="./js/modal.js"></script>
 </body>
 </html>
