@@ -23,6 +23,8 @@
   vertical-align: middle;
   font-size: 340px;
   font-weight: 100;
+
+  transition: color 200ms linear;
 }
 .countdown-time-second {
   color: #F36A7E;

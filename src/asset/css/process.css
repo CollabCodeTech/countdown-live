@@ -3,6 +3,8 @@
   width: 100%;
   overflow: hidden;
   border-radius: 5px;
+
+  transition: background-color 200ms linear;
 }
 .process {
   background-color: #C3C5C6;
@@ -10,4 +12,6 @@
   display: block;
   transform-origin: right top;
   transition: .3s;
+
+  transition: background-color 200ms linear;
 }

@@ -1,3 +1,7 @@
+body {
+  transition: background-color 200ms linear;
+}
+
 .container {
   height: 100%;
   display: flex;
