@@ -1,6 +1,6 @@
 ((doc) => {
   const $modal = doc.querySelector('.modal')
-  const $modalAction = doc.querySelector('.modal-action')
+  const $modalAction = $modal.querySelector('.modal-action')
   const $modalActionValue = $modalAction.querySelector('.modal-action-value')
   const $modalActionOutput = $modalAction.querySelector('.modal-action-output')
   const valueInitialOutput = $modalActionOutput.value
@@ -37,6 +37,22 @@
   $modalActionValue.addEventListener('keyup', () => {
     updateModalActionWarm()
     updateBtnDisabled()
+  })
+
+  $modalAction.addEventListener('submit', (event) => {
+    event.preventDefault()
+
+    $modal.classList.add('modal_isCreating')
+  })
+
+  $modal.addEventListener('transitionend', (event) => {
+    if(event.pseudoElement && $modal.classList.contains('modal_isDone')) {
+      $modal.classList.remove('modal_isActive', 'modal_isCreating', 'modal_isDone')
+    }
+    if(event.pseudoElement && $modal.classList.contains('modal_isCreating')) {
+      $modal.classList.remove('modal_isCreating')
+      $modal.classList.add('modal_isDone')
+    }
   })
 
   function updateModalActionWarm() {
