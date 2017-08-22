@@ -22,7 +22,9 @@
   $modalActionValue.addEventListener('keydown', (event) => {
     const isNumberOrLetter = /^[0-9A-Za-z]$/
     
-    if(parseInt($modalActionValue.value.length) >= valueInitialWarm && isNumberOrLetter.exec(event.key) && !isTextSelected($modalActionValue)) {
+    if(parseInt($modalActionValue.value.length) >= valueInitialWarm 
+        && isNumberOrLetter.exec(event.key) 
+        && !isTextSelected($modalActionValue)) {
       event.preventDefault()
     }
 
