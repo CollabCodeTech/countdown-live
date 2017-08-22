@@ -67,6 +67,9 @@
   height: 55px;
   line-height: 55px;
 }
+.modal .modal-action-btn:active {
+  transform: scale(1);
+}
 .modal_isCreating .modal-action::before {
   height: 58px;
   transform: translateX(0);
