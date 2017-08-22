@@ -6,6 +6,7 @@
   const valueInitialOutput = $modalActionOutput.value
   const $modalActionWarm = $modalAction.querySelector('.modal-action-warm')
   let valueInitialWarm = $modalActionWarm.textContent
+  const $modalActionBtn = $modalAction.querySelector('.modal-action-btn')
 
   window.addEventListener('load', () => {
     updateModalActionWarm()
@@ -35,12 +36,21 @@
 
   $modalActionValue.addEventListener('keyup', () => {
     updateModalActionWarm()
+    updateBtnDisabled()
   })
 
   function updateModalActionWarm() {
     if(parseInt($modalActionValue.value.length) <= valueInitialWarm) {
       $modalActionOutput.innerHTML = `${valueInitialOutput}<strong>${$modalActionValue.value}</strong>`
       $modalActionWarm.textContent = valueInitialWarm - $modalActionValue.value.length
+    }
+  }
+
+  function updateBtnDisabled() {
+    if($modalActionValue.value.length != 0) {
+      $modalActionBtn.removeAttribute('disabled')
+    } else {
+      $modalActionBtn.setAttribute('disabled', true)
     }
   }
 

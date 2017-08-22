@@ -13,15 +13,21 @@
   transition: all 200ms linear;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:disabled {
+  cursor: auto;
+  opacity: .4;
+  color: rgba(255, 255, 255, 1)
+}
+
+.btn:not(:disabled):hover,
+.btn:not(:disabled):focus {
   opacity: 1;
 }
 
-.btn:active {
+.btn:not(:disabled):active {
   transform: scale(.9)
 }
 
 .btn_second {
-  background-color: #bdc3c7;
+  background-color: #3498db;
 }
