@@ -43,6 +43,11 @@
     event.preventDefault()
 
     $modal.classList.add('modal_isCreating')
+
+    fetch('/url', {
+      method: 'POST',
+      bdoy: {foi: true}
+    })
   })
 
   $modal.addEventListener('transitionend', (event) => {
